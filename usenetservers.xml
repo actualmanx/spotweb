@@ -4,6 +4,19 @@
 		to support this, we need the ssl attribute on the individual elements as well
 	-->
 	<usenetservers>
+		<server name='Newsdemon'>
+			<ssl>
+				<header ssl='yes' port='80'>news.newsdemon.com</header>
+				<nzb ssl='yes' port='80'>news.newsdemon.com</nzb>
+				<post ssl='yes' port='80'>news.newsdemon.com</post>
+			</ssl>
+			<plain>
+				<header ssl='' port='119'>news.newsdemon.com</header>
+				<nzb ssl='' port='119'>news.newsdemon.com</nzb>
+				<post ssl='' port='119'>news.newsdemon.com</post>
+			</plain>
+		</server>
+		
 		<server name='4UX' buggy='true'>
 			<ssl>
 				<header ssl='yes' port='563'>news.4ux.nl</header>
