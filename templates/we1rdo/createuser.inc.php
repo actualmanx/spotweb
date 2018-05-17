@@ -11,13 +11,13 @@ if (!showResults($result)) {
 			<dt><label for="createuserform[username]"><?php echo _('Username'); ?></label></dt>
 			<dd><input type="text" name="createuserform[username]" value="<?php echo htmlspecialchars($createuserform['username']); ?>"></dd>
 
-			<dt><label for="createuserform[firstname]"><?php echo _('Firstname'); ?></label></dt>
+			<dt><label for="createuserform[firstname]"><?php echo _('First name'); ?></label></dt>
 			<dd><input type="text" name="createuserform[firstname]" value="<?php echo htmlspecialchars($createuserform['firstname']); ?>"></dd>
 
-			<dt><label for="createuserform[lastname]"><?php echo _('Lastname'); ?></label></dt>
+			<dt><label for="createuserform[lastname]"><?php echo _('Last name'); ?></label></dt>
 			<dd><input type="text" name="createuserform[lastname]" value="<?php echo htmlspecialchars($createuserform['lastname']); ?>"></dd>
 			
-			<dt><label for="createuserform[mail]"><?php echo _('E-mailaddress'); ?></label></dt>
+			<dt><label for="createuserform[mail]"><?php echo _('E-mail address'); ?></label></dt>
 			<dd><input type="text" name="createuserform[mail]" value="<?php echo htmlspecialchars($createuserform['mail']); ?>"></dd>
 
 <?php if ($tplHelper->allowed(SpotSecurity::spotsec_send_notifications_services, 'email') && !$this->_settings->get('sendwelcomemail')) { ?>

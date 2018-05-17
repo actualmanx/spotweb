@@ -22,10 +22,10 @@ if (!showResults($result)) {
 			<input type="hidden" name="edituserform[newpassword2]" value="dummyvalue">
 <?php } ?>
 
-			<dt><label for="edituserform[firstname]"><?php echo _('Firstname'); ?></label></dt>
+			<dt><label for="edituserform[firstname]"><?php echo _('First name'); ?></label></dt>
 			<dd><input type="text" name="edituserform[firstname]" value="<?php echo htmlspecialchars($edituserform['firstname']); ?>"></dd>
 
-			<dt><label for="edituserform[lastname]"><?php echo _('Lastname'); ?></label></dt>
+			<dt><label for="edituserform[lastname]"><?php echo _('Last name'); ?></label></dt>
 			<dd><input type="text" name="edituserform[lastname]"  value="<?php echo htmlspecialchars($edituserform['lastname']); ?>"></dd>
 
 			<dt><label for="edituserform[mail]"><?php echo _('E-mail Address'); ?></label></dt>

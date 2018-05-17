@@ -1,13 +1,13 @@
-Spotweb registratie
+Spotweb registration
 
-Hallo <?php echo $user['firstname'] . ' ' . $user['lastname'] ?>,
+Hello <?php echo $user['firstname'] . ' ' . $user['lastname'] ?>,
 
-Er is zojuist een account voor je aangemaakt op <?php echo $settings->get('spotweburl'); ?>.
+You have just created an account for you <?php echo $settings->get('spotweburl'); ?>.
 
-Je kunt inloggen met de volgende gegevens:
+You can login with the following information:
 
-Gebruikersnaam:		<?php echo $user['username']; ?> 
-Wachtwoord:		<?php echo $user['newpassword1']; ?> 
+Username:		<?php echo $user['username']; ?> 
+password:		<?php echo $user['newpassword1']; ?> 
 
-Met vriendelijke groet,
+Sincerely,
 <?php echo $adminUser['firstname'] . ' ' . $adminUser['lastname']; ?>.

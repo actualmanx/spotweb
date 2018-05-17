@@ -15,7 +15,7 @@ $.address.init(function() {
 			} else if ($.address.value() != '/') openSpot($('table.spots tr.active a.spotlink'), $.address.value());
 		});
 
-function initSpotwebJs(BetweenText, AndText) {
+function initSpotwebJs() {
 	//ready
 	$("a.spotlink").click(function(e) { e.preventDefault(); });
 	if(navigator.userAgent.toLowerCase().indexOf('chrome')>-1)$('a.spotlink').mouseup(function(e){if(e.which==2||(e.metaKey||e.ctrlKey)&&e.which==1){$(this).attr('rel','address:');}});
@@ -26,11 +26,12 @@ function initSpotwebJs(BetweenText, AndText) {
      */
     $('.showTipTip a.spotlink').each(applyTipTip);
 
+
     attachInfiniteScroll();
     attachKeyBindings();
     attachSidebarBehaviour();
     attachSidebarVisibility();
-    attachAdvancedSearchBehaviour(BetweenText, AndText);
+    attachAdvancedSearchBehaviour();
     attachFilterVisibility();
     attachMaintenanceButtonsBehaviour();
 
@@ -607,7 +608,7 @@ function toggleSidebarItem(id) {
 }
 
 // Geavanceerd zoeken op juiste moment zichtbaar / onzichtbaar maken
-function attachAdvancedSearchBehaviour(BetweenText, AndText) {
+function attachAdvancedSearchBehaviour() {
 // console.time("7th-ready");
 	//ready
 	$("input.searchbox").focus(function(){
@@ -617,7 +618,7 @@ function attachAdvancedSearchBehaviour(BetweenText, AndText) {
 
             if (!$('div#tree').data('dynatree')) {
                 attachDateSortBehaviour();
-                initSliders(BetweenText, AndText);
+                initSliders();
                 initializeCategoryTree();
 
                 $("input[name='search[unfiltered]']").prop('checked') ? $("div#tree").hide() : $("div#tree").show();
@@ -1343,7 +1344,7 @@ function findNearest(possibleValues, realValues, includeLeft, includeRight, valu
     return [nearest, realValue];
 }
 
-function initSliders(BetweenText, AndText) {
+function initSliders() {
     var _1MB = 1024 * 1024;
     var _1GB = 1024 * 1024 * 1024;
 
@@ -1388,7 +1389,7 @@ function initSliders(BetweenText, AndText) {
                 sliderMaxFileSize = fixedValues[1];
             } // else
 
-            $( "#human-filesize" ).text( BetweenText + format_size( parseInt($( "#min-filesize").val().substring("filesize:>:DEF:".length)) ) + AndText + format_size( parseInt($( "#max-filesize").val().substring("filesize:>:DEF:".length) )) );
+            $( "#human-filesize" ).text( "Tussen " + format_size( parseInt($( "#min-filesize").val().substring("filesize:>:DEF:".length)) ) + " en " + format_size( parseInt($( "#max-filesize").val().substring("filesize:>:DEF:".length) )) );
 
             return false;
             }
@@ -1417,7 +1418,7 @@ function initSliders(BetweenText, AndText) {
     var nearestMax = findNearest(possibleValues, realValues, false, true, convertedSliderMaxFileSize);
     $( "#min-filesize" ).val( "filesize:>:DEF:" + nearestMin[1]);
     $( "#max-filesize" ).val( "filesize:<:DEF:" + nearestMax[1]);
-    $( "#human-filesize" ).text(BetweenText + format_size( parseInt($( "#min-filesize").val().substring("filesize:>:DEF:".length)) ) + AndText + format_size( parseInt($( "#max-filesize").val().substring("filesize:>:DEF:".length) )) );
+    $( "#human-filesize" ).text( "Tussen " + format_size( parseInt($( "#min-filesize").val().substring("filesize:>:DEF:".length)) ) + " en " + format_size( parseInt($( "#max-filesize").val().substring("filesize:>:DEF:".length) )) );
 
     /* Report counts */
     var reportSlideValue = $( "#slider-reportcount" ).slider("values", 0);

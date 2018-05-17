@@ -1,3 +1,3 @@
-NZB verstuurd
+NZB sent
 
-<?php echo $spot['title']; ?> verstuurd naar NZBVortex.
+<?php echo $spot['title']; ?> Sent to NZBVortex.

@@ -1,4 +1,4 @@
-Nieuwe spots opgehaald
+New spots picked up
 
 Er <?php
 echo ($newSpotCount == 1) ? "is " . $newSpotCount . " spot" : "zijn " . $newSpotCount . " spots";
@@ -11,4 +11,4 @@ if ($newReportCount > 0) {
 	echo " en " . $newReportCount;
 	echo ($newCommentCount == 1) ? " reports" : " reports";
 } # if
-?> opgehaald.
+?> picked up.
