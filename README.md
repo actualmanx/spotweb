@@ -54,7 +54,7 @@ Installation is the toughest part of Spotweb. Depending on your platform you sho
 1. Ensure you have an database server installed (MySQL, PostgreSQL or SQLite).
 2. Create an empty 'spotweb' database.
 3. Ensure you have a webserver running and PHP is configured for this webserver.
-4. [Download the Spotweb zip file.](https://github.com/spotweb/spotweb/archive/master.zip)
+4. [Download the Spotweb zip file.](https://github.com/actualmanx/spotweb/archive/master.zip)
 5. Unpack the zip file to a directory of choice.
 6. Open 'install.php' in your browser until everything is 'OK'. Fix the parts which aren't OK.
 7. Follow the wizard and perform the instructions as given by the wizard.
