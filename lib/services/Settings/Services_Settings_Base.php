@@ -97,10 +97,10 @@ class Services_Settings_Base
             $result->addError(_('The amount of comments must be a number above 1'));
         }
 
-        // We don't want to save megabytes of CSS, so put a limit to the size
-		if (strlen($settings['customcss']) > 1024 * 10) {
-		$result->addError(_('Custom CSS is too large'));
-		} // if
+        // We don't want to save megabyts of CSS, so put a limit to the size
+        if (strlen($settings['customcss'] > 1024 * 10)) {
+            $result->addError(_('Custom CSS is too large'));
+        } // if
 
         // validate smtp settings or sett default if not used
         $settings['smtp']['use'] = (isset($settings['smtp']['use']['switch'])) ? true : false;
